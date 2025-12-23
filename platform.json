@@ -1,0 +1,124 @@
+{
+  "name": "weidos-mkr",
+  "title": "Weidmuller Weidos MKR",
+  "description": "Weidos PLC MKR is a  programmable logic controller designed for industrial automation. It combines the flexibility of Arduino/Open Source  and industrial I/O capabilities, offering digital and analog inputs/outputs, relay control, and communication interfaces like RS485 and Ethernet, all in a DIN-rail-mountable form factor.",
+  "homepage": "https://www.weidmuller.es/es/index.jsp",
+  "license": "Apache-2.0",
+  "keywords": [
+    "dev-platform",
+    "ARM",
+    "Cortex-M",
+    "Atmel",
+    "Microchip",
+    "SAM",
+    "SAM D"
+  ],
+  "engines": {
+    "platformio": "^6"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "version": "1.0.0",
+  "frameworks": {
+    "arduino": {
+      "package": "framework-arduino-samd-weidmuller",
+      "script": "builder/frameworks/arduino.py"
+    },
+    "zephyr": {
+      "package": "framework-zephyr",
+      "script": "builder/frameworks/zephyr.py"
+    }
+  },
+  "packages": {
+    "framework-arduino-samd-weidmuller":{
+      "type": "framework",
+      "optional": false,
+      "owner": "weidmuller",
+      "version": ">=1.0.0"
+    },
+    "toolchain-gccarmnoneeabi": {
+      "type": "toolchain",
+      "owner": "platformio",
+      "version": "~1.70201.0",
+      "optionalVersions": [
+        ">=1.40803.0,<1.40805.0",
+        ">=1.60301.0,<1.80000.0",
+        "~1.80201.0",
+        "~1.90301.0"
+      ]
+    },
+    "framework-cmsis": {
+      "type": "framework",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~1.40500.0",
+      "optionalVersions": [
+        "~2.50400.0"
+      ]
+    },
+    "framework-cmsis-atmel": {
+      "type": "framework",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~1.2.2",
+      "optionalVersions": [
+        "~1.1.0"
+      ]
+    },
+    "framework-zephyr": {
+      "type": "framework",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~2.20701.0"
+    },
+    "tool-avrdude": {
+      "type": "uploader",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~1.60300.0"
+    },
+    "tool-bossac": {
+      "type": "uploader",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~1.10700.0",
+      "optionalVersions": [
+        "~1.10900.0"
+      ]
+    },
+    "tool-openocd": {
+      "type": "uploader",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~3.1200.0"
+    },
+    "tool-jlink": {
+      "type": "uploader",
+      "optional": true,
+      "owner": "platformio",
+      "version": "^1.63208.0"
+    },
+    "tool-cmake": {
+      "optional": true,
+      "owner": "platformio",
+      "version": "~3.21.0"
+    },
+    "tool-dtc": {
+      "optional": true,
+      "owner": "platformio",
+      "version": "~1.4.7"
+    },
+    "tool-ninja": {
+      "optional": true,
+      "owner": "platformio",
+      "version": "^1.7.0"
+    },
+    "tool-gperf": {
+      "optional": true,
+      "owner": "platformio",
+      "version": "^3.0.0"
+    }
+  }
+}
